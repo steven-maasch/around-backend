@@ -1,0 +1,14 @@
+--- # Umsetzung 1 OAuth2
+        - How does this shit works????
+--- # Umsetzung 2 SpringSocialLogin
+        - Backend übernimmt Login
+        - erstellt auf Basis einen User-Account
+--- # Umsetzung 3 iOS-Client
+        - App authentifiziert sich gegenüber Twitter
+        - Antwort: u. a. Username, E-Mail und token
+        - App registriet sich mit den Daten aus der Antwort im Backend
+        - jeder Request ans Backend enthält Token
+        - Token Validierung Backend???
+--- # Links
+- https://github.com/spring-projects/spring-social-samples/tree/master/spring-social-quickstart
+- http://docs.spring.io/spring-social/docs/1.1.0.RELEASE/reference/htmlsingle/#signing-up-after-a-failed-sign-in
