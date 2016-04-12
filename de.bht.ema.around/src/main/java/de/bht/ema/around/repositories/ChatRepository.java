@@ -1,0 +1,25 @@
+package de.bht.ema.around.repositories;
+
+import java.util.Date;
+
+import de.bht.ema.around.model.Chat;
+import de.bht.ema.around.model.ChatMessage;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+public interface ChatRepository extends CrudRepository<Chat, Long> {
+
+	Iterable<Chat> findAllBySpotId(Long id);
+	
+	@Query("SELECT m FROM Chat c JOIN c.messages m WHERE c.id = ?1 ORDER BY m.createdOn")
+	Iterable<ChatMessage> findAllChatMessagesByChatIdOrderByCreatedOn(Long chatId);
+	
+	@Query("SELECT m FROM Chat c JOIN c.messages m WHERE c.id = ?1 and m.createdOn > ?2 ORDER BY m.createdOn")
+	Iterable<ChatMessage> findAllChatMessagesByChatIdAndAfterCreatedOnOrderByCreatedOn(Long chatId, Date after);
+	
+	@Query("SELECT m FROM Chat c JOIN c.messages m WHERE c.id = ?1 and m.id > ?2 ORDER BY m.id")
+	Iterable<ChatMessage> findAllChatMessagesByChatIdAndGreaterThanChatMessageIdOrderByChatMessageId(Long chatId, Long messageId);
+
+}
+
+
