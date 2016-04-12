@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.bht.ema</groupId>
 	<artifactId>around</artifactId>
@@ -23,7 +23,6 @@
 		<snakeyaml.version>1.15</snakeyaml.version>
 		<tika-core.version>1.8</tika-core.version>
 		<aws-java-sdk-sns.version>1.10.6</aws-java-sdk-sns.version>
-
 
 		<compiler.plugin.version>3.3</compiler.plugin.version>
 		<maven.compiler.source>1.7</maven.compiler.source>
